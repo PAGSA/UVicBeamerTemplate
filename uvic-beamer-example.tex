@@ -1,0 +1,62 @@
+%
+% Example Slides for UVic Beamer Template
+% Orginally designed by Matt LeBlanc <matt.leblanc@cern.ch>
+% Updated and maintained by Caleb Miller <calebmiller@uvic.ca>
+% Dept. of Physics & Astronomy
+% University of Victoria, British Columbia, Canada
+%
+\documentclass{beamer}
+\input{uvic-beamer/uvic-header.tex}
+
+\usepackage[draft]{pgf} %used for demo picture
+
+
+%Color schemes can be changed in the uvic-header.tex file
+\title[Bottom Bar Title]{Main Title}
+\subtitle{subtitle}
+\author[YN]{Your Name} %[] for short name on bottom bar
+\institute[UVic]{University of Victoria}
+\date{\today}  %\date[2015-07-10]{July 10, 2015} if you prefer to specify
+
+%%%
+
+\begin{document}
+
+% Title Page
+
+% We want this slide to have the other background, with the UVic crest ...
+{
+\usebackgroundtemplate{\includegraphics[width=\paperwidth,height=\paperheight]{uvic-beamer/uvic-title.pdf}}%
+\begin{frame}[plain]
+	\titlepage
+	\vspace{1.75cm} % You might need to play with this to get something that looks good - depends on the length of your title!
+\end{frame}
+}
+
+% Slides in body have two options, with bird or without. To remove the bird the last line in the uvic-beamer/uvic-header.tex file needs to be edited.
+\begin{frame}
+	\frametitle{Frame Title}
+	\framesubtitle{Frame Subtitle}
+	\begin{itemize}
+		\item Lorem ipsum dolor sit amet.
+		\item Populo laoreet indoctum ne nec, putent mnesarchum at duo.
+	\end{itemize}
+	\begin{table}
+		\begin{tabular}{|c|c|c|}\hline
+			1&2&3\\ \hline
+			1&2&3\\ \hline
+			1&2&3\\ \hline
+		\end{tabular}
+	\end{table}
+\end{frame}
+\begin{frame}
+	\frametitle{Frame Title}
+	\begin{figure}[ht]
+		\centering
+		\begin{pgfpicture}
+			\pgftext{\pgfimage[width=5cm,height=4cm]{picture.png}}
+		\end{pgfpicture}
+		\caption{a picture}
+	\end{figure}
+\end{frame}
+\end{document}

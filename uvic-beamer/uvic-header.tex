@@ -1,0 +1,84 @@
+%
+% University of Victoria Beamer Template
+% Orginally designed by Matt LeBlanc <matt.leblanc@cern.ch>
+% Updated and maintained by Caleb Miller <calebmiller@uvic.ca>
+% Dept. of Physics & Astronomy
+% University of Victoria, British Columbia, Canada
+%
+
+
+\geometry{paperwidth=140mm,paperheight=105mm}
+
+
+% Provides widescreen slide support.
+\usepackage[orientation=landscape,size=custom,width=16,height=9.75,scale=0.5,debug]{beamerposter}
+
+% UVic color hex values from:
+% https://www.uvic.ca/communicationsmarketing/assets/docs/UVic-Brand-Guidelines.pdf
+\definecolor{vicBlue}{RGB}{1, 38, 179}
+\definecolor{vicNavy}{RGB}{0, 40, 87}
+\definecolor{vicCyan}{RGB}{0, 116, 122}
+\definecolor{vicRed}{RGB}{ 241, 0, 50}
+\definecolor{vicYellow}{RGB}{250, 200, 0}
+\definecolor{vicGold}{RGB}{249, 185, 52}
+
+%These colours can be changed to suit your needs/style. Either with the custom UVic colours above or with the standard colours:
+%red green blue yellow orange purple violet magenta cyan brown black white darkgray lightgray gray
+\setbeamercolor{title}{fg=vicNavy}
+\setbeamercolor{titlelike}{fg=vicNavy}
+\setbeamercolor{normal text}{fg=vicNavy}
+\setbeamercolor{item projected}{fg=vicNavy}
+\setbeamercolor{frametitle}{fg=vicNavy}
+\setbeamercolor{alerted text}{fg=vicRed}
+\setbeamercolor{block title}{fg=white,bg=vicRed}
+\setbeamercolor{block body}{fg=white,bg=vicRed}
+\setbeamercolor{block title example}{fg=white,bg=vicRed}
+\setbeamercolor{block body example}{fg=white,bg=vicRed}
+\setbeamercolor{vicFooterAuthor}{fg=white, bg=vicGold}
+\setbeamercolor{vicFooterTitle}{fg=white, bg=vicNavy}
+\setbeamercolor{vicFooterSlide}{fg=white, bg=vicNavy}
+
+\usefonttheme{professionalfonts}
+\usetheme{Boadilla}
+\setbeamertemplate{itemize items}[circle]
+
+\useinnertheme{rectangles}
+\setbeamertemplate{blocks}[default]
+
+\setbeamercolor{block title}{fg=white,bg=vicRed}
+\setbeamercolor{block body}{fg=vicNavy,bg=vicRed!25}
+\setbeamercolor{block title example}{fg=white,bg=vicRed}
+\setbeamercolor{block body example}{fg=white,bg=vicRed}
+
+
+\makeatother
+\setbeamertemplate{footline}
+{
+  \leavevmode%
+  \hbox{%
+  \pgfsetfillopacity{1.0}
+  \begin{beamercolorbox}[wd=.3\paperwidth,ht=2.25ex,dp=1ex,center]{vicFooterAuthor}%
+    \usebeamerfont{author in head/foot}\insertshortauthor\;(\insertshortinstitute)
+  \end{beamercolorbox}%
+  \begin{beamercolorbox}[wd=.4\paperwidth,ht=2.25ex,dp=1ex,center]{vicFooterTitle}%
+    \usebeamerfont{title in head/foot}\insertshorttitle%\hspace*{10em}
+    %\insertframenumber{} / \inserttotalframenumber\hspace*{1ex}
+  \end{beamercolorbox}}%
+  \begin{beamercolorbox}[wd=.3\paperwidth,ht=2.25ex,dp=1ex,center]{vicFooterSlide}%
+  	\insertframenumber{} / \inserttotalframenumber%\hspace*{1ex}
+  \end{beamercolorbox}%
+  \vskip0pt%
+}
+\makeatletter
+
+\beamertemplatenavigationsymbolsempty
+
+% Provides the bird background.
+\usebackgroundtemplate{
+  \includegraphics[width=\paperwidth,height=\paperheight]{uvic-beamer/uvic-bird.pdf}
+  }
+% Provides the edge background.
+%\usebackgroundtemplate{
+%	\includegraphics[width=\paperwidth,height=\paperheight]{uvic-beamer/uvic-edge.pdf}
+%}
+  
